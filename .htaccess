@@ -1,0 +1,18 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<FilesMatch "\.(sql|md|log|ini)$">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^database/ - [F,L]
+
+# Don't allow executing PHP inside uploads
+RewriteRule ^assets/uploads/.*\.(php|phtml|phar)$ - [F,L]
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
