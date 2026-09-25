@@ -1,0 +1,35 @@
+# Dependencies & packages
+/vendor/
+/node_modules/
+
+# Environment / config overrides
+.env
+*.local.php
+
+# Uploaded user content
+/assets/uploads/*
+!/assets/uploads/.gitkeep
+!/assets/uploads/avatars/.gitkeep
+!/assets/uploads/courses/.gitkeep
+!/assets/uploads/notes/.gitkeep
+!/assets/uploads/assignments/.gitkeep
+!/assets/uploads/papers/.gitkeep
+
+# Logs
+*.log
+/error_log
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE junk
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.swp
+*~
