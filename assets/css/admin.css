@@ -1,0 +1,41 @@
+/* EduSphere LMS — Admin & approval styles */
+
+.table-wrap + .empty,
+.empty + .table-wrap { margin-top: 1rem; }
+
+.panel .table th:first-child { border-top-left-radius: var(--radius-md); }
+.panel .table th:last-child  { border-top-right-radius: var(--radius-md); }
+
+/* Status badges */
+.badge--status-pending   { background: var(--amber-100);  color: var(--amber-600); }
+.badge--status-active    { background: var(--success-100); color: var(--success-500); }
+.badge--status-rejected  { background: var(--danger-100); color: var(--danger-500); }
+.badge--status-suspended { background: #eee2c9; color: #6f5520; }
+
+/* Bulk action bar */
+.bulk-bar {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--paper-100);
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+.bulk-bar .field--check { margin: 0; }
+
+/* Notification list */
+.notif-list { list-style: none; padding: 0; margin: 0; }
+.notif-item {
+    display: flex; gap: 1rem; justify-content: space-between; align-items: flex-start;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.6rem;
+    background: #fff;
+}
+.notif-item.is-unread { border-left: 3px solid var(--rust-500); }
+.notif-item.is-read   { opacity: 0.75; }
+.notif-item__head { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.25rem; }
+.notif-item__head strong { color: var(--ink-900); }
+.notif-item__body p { margin: 0 0 0.35rem; color: var(--ink-500); font-size: 0.9rem; }
+.notif-item__actions { display: flex; gap: 0.4rem; flex-shrink: 0; }

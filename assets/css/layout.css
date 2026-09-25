@@ -1,0 +1,139 @@
+/* =========================================================
+   EduSphere LMS — App layout: sidebar + topbar + content
+   ========================================================= */
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--ink-900);
+    color: #d8d2c8;
+    display: flex; flex-direction: column;
+    padding: 1.25rem 0;
+    position: sticky; top: 0; height: 100vh;
+    overflow-y: auto;
+}
+.sidebar__brand {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0 1.25rem 1.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 0.75rem;
+}
+.sidebar__logo {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px;
+    background: var(--terra-500); color: #fff;
+    border-radius: 8px;
+    font-weight: 700; font-size: 0.85rem;
+    font-family: var(--font-display);
+}
+.sidebar__brandtext { font-family: var(--font-display); font-weight: 700; color: #fff; font-size: 1.05rem; }
+
+.nav-section {
+    padding: 0.9rem 1.25rem 0.35rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+}
+.nav-item {
+    display: block;
+    padding: 0.55rem 1.25rem;
+    color: #d8d2c8;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.nav-item:hover { background: rgba(255,255,255,0.04); color: #fff; }
+.nav-item.is-active { color: #fff; background: rgba(196,93,62,0.15); border-left-color: var(--terra-500); }
+
+.sidebar__footer { margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* Main */
+.app__main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.topbar {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 0.9rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid var(--ink-200);
+    position: sticky; top: 0; z-index: 50;
+}
+.topbar__title h1 { font-size: 1.1rem; margin: 0; }
+.topbar__burger {
+    display: none;
+    width: 36px; height: 36px;
+    border: 1px solid var(--ink-200); border-radius: var(--radius-sm);
+    background: #fff; cursor: pointer;
+    flex-direction: column; justify-content: center; align-items: center; gap: 4px;
+}
+.topbar__burger span { width: 16px; height: 2px; background: var(--ink-700); display: block; }
+.topbar__user { margin-left: auto; position: relative; }
+.user-chip {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.35rem 0.7rem 0.35rem 0.35rem;
+    border-radius: 999px;
+    background: var(--paper-100);
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+.user-chip__avatar {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--terra-500); color: #fff;
+    font-weight: 700; font-size: 0.8rem;
+}
+.user-chip__name { font-weight: 600; color: var(--ink-700); }
+.user-chip__role { color: var(--ink-400); font-size: 0.78rem; }
+.user-menu {
+    position: absolute; right: 0; top: calc(100% + 6px);
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2);
+    padding: 0.35rem 0;
+    display: none;
+    z-index: 100;
+}
+.user-menu.is-open { display: block; }
+.user-menu a { display: block; padding: 0.5rem 1rem; color: var(--ink-700); font-size: 0.88rem; }
+.user-menu a:hover { background: var(--paper-100); }
+
+.content { padding: 1.5rem; max-width: 1280px; width: 100%; }
+
+.app__footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--ink-200);
+    color: var(--ink-400);
+    font-size: 0.8rem;
+    background: #fff;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .sidebar {
+        position: fixed; top: 0; left: 0; z-index: 500;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
+        box-shadow: var(--shadow-3);
+    }
+    .sidebar.is-open { transform: translateX(0); }
+    .topbar__burger { display: flex; }
+    .content { padding: 1rem; }
+}
+
+.nav-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: var(--rust-500);
+    color: #fff;
+    border-radius: 999px;
+    vertical-align: middle;
+}

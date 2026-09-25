@@ -1,0 +1,44 @@
+/* =========================================================
+   EduSphere LMS — Assignments
+   ========================================================= */
+
+.assignment-list { list-style: none; padding: 0; margin: 0; }
+.assignment-row {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    padding: 0.9rem 1rem;
+    background: #fff;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.6rem;
+    transition: border-color 0.15s;
+}
+.assignment-row:hover { border-color: var(--ink-300); }
+.assignment-row__title { font-weight: 600; color: var(--ink-900); font-size: 0.98rem; }
+.assignment-row__status { flex-shrink: 0; }
+
+.detail {
+    background: #fff; border: 1px solid var(--ink-200); border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+.detail__head { padding-bottom: 1rem; border-bottom: 1px solid var(--ink-200); margin-bottom: 1.25rem; }
+.detail__head h2 { margin: 0.4rem 0 0.35rem; }
+.detail__body { padding: 0.5rem 0 1.25rem; border-bottom: 1px solid var(--ink-200); margin-bottom: 1.25rem; }
+.detail__body:last-child { border-bottom: none; margin-bottom: 0; }
+
+.grade-box {
+    display: flex; align-items: baseline; gap: 0.35rem;
+    margin: 0.75rem 0 0.5rem;
+}
+.grade-box__score { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--success-500); }
+.grade-box__max { color: var(--ink-400); font-size: 1rem; }
+.feedback { background: var(--paper-100); padding: 0.85rem 1rem; border-radius: var(--radius-sm); margin: 0.5rem 0 1rem; }
+.feedback strong { display: block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-400); margin-bottom: 0.35rem; }
+.feedback p { margin: 0; color: var(--ink-700); }
+
+.submission-block {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--ink-200);
+}
+.submission-block:last-child { border-bottom: none; }
+.submission-block header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
+.submission-block__content { color: var(--ink-700); background: var(--paper-50); padding: 0.75rem 1rem; border-radius: var(--radius-sm); font-size: 0.9rem; }

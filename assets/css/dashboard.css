@@ -1,0 +1,114 @@
+/* =========================================================
+   EduSphere LMS — Dashboard
+   ========================================================= */
+
+.dash-hero {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(120deg, var(--ink-900) 0%, #3a352e 100%);
+    color: #fff;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+.dash-hero__eyebrow {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); margin: 0 0 0.35rem;
+}
+.dash-hero__name { color: #fff; margin: 0 0 0.25rem; font-size: 1.5rem; }
+.dash-hero__meta { color: rgba(255,255,255,0.65); margin: 0; font-size: 0.88rem; }
+.dash-hero__actions .btn { background: var(--terra-500); }
+.dash-hero__actions .btn:hover { background: var(--terra-600); }
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.stat {
+    background: #fff;
+    padding: 1.1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--ink-200);
+    box-shadow: var(--shadow-1);
+}
+.stat__label { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-400); margin-bottom: 0.4rem; }
+.stat__value { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: var(--ink-900); }
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+@media (max-width: 900px) { .dash-grid { grid-template-columns: 1fr; } }
+
+.course-list { list-style: none; padding: 0; margin: 0; }
+.course-list__item {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--ink-200);
+}
+.course-list__item:last-child { border-bottom: none; }
+.course-list__code { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-400); margin: 0; }
+.course-list__title { font-weight: 600; color: var(--ink-900); display: block; margin: 0.15rem 0; }
+.course-list__meta { font-size: 0.82rem; color: var(--ink-400); margin: 0; }
+.course-list__progress { min-width: 120px; text-align: right; font-size: 0.85rem; font-weight: 600; color: var(--terra-600); }
+.course-list__progress .progress { margin-top: 0.35rem; }
+
+.deadline-list { list-style: none; padding: 0; margin: 0; }
+.deadline-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.7rem 0; border-bottom: 1px solid var(--ink-200);
+}
+.deadline-list li:last-child { border-bottom: none; }
+.deadline-list__title { font-weight: 600; color: var(--ink-900); }
+.deadline-list__meta { font-size: 0.82rem; color: var(--ink-400); margin: 0.1rem 0 0; }
+.deadline-list__date { font-size: 0.85rem; font-weight: 600; color: var(--terra-600); }
+
+.ann-list { list-style: none; padding: 0; margin: 0; }
+.ann-list li { padding: 1rem 0; border-bottom: 1px solid var(--ink-200); }
+.ann-list li:last-child { border-bottom: none; }
+.ann-list__head { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.35rem; }
+.ann-list__head strong { color: var(--ink-900); }
+.ann-list p { margin: 0 0 0.35rem; color: var(--ink-500); font-size: 0.9rem; }
+.ann-list__meta { font-size: 0.78rem; color: var(--ink-400); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.progress-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+.progress-card {
+    background: #fff; padding: 1.1rem 1.2rem;
+    border: 1px solid var(--ink-200); border-radius: var(--radius-md);
+    box-shadow: var(--shadow-1);
+}
+.progress-card h3 { margin: 0 0 0.2rem; }
+.progress-card__meter {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin: 0.75rem 0 0.4rem;
+}
+.progress-card__meter span { font-weight: 700; color: var(--terra-600); }
+.progress-card__meter .progress { flex: 1; }
+
+/* Profile header card (used in profile.php) */
+.profile-header {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;
+    padding-bottom: 1rem; border-bottom: 1px solid var(--ink-200);
+}
+.profile-avatar {
+    width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
+    border: 2px solid var(--paper-200);
+}
+.profile-avatar--fallback {
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--rust-500); color: #fff;
+    font-family: var(--font-display); font-size: 1.4rem; font-weight: 700;
+}
+.user-chip__avatar-img {
+    width: 28px; height: 28px; border-radius: 50%; object-fit: cover;
+    display: inline-block;
+}

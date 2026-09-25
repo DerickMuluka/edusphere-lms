@@ -1,0 +1,59 @@
+/* =========================================================
+   EduSphere LMS — Auth pages (login / register)
+   ========================================================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: linear-gradient(160deg, #fdfbf7 0%, #f1e9dc 60%, #e7d9c5 100%);
+    box-sizing: border-box;
+}
+.auth-page--alt { background: linear-gradient(160deg, #fdfbf7 0%, #e9efe6 60%, #d5ddce 100%); }
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-3);
+    border: 1px solid rgba(31, 29, 26, 0.05);
+}
+.auth-card__head { text-align: center; margin-bottom: 1.5rem; }
+.auth-card__head h1 { font-size: 1.4rem; margin: 0.75rem 0 0.25rem; }
+.auth-card__head p { color: var(--ink-400); font-size: 0.9rem; margin: 0; }
+.auth-card__logo {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px;
+    background: var(--ink-900); color: #fff;
+    border-radius: var(--radius-md);
+    font-weight: 700; letter-spacing: 0.02em;
+    font-family: var(--font-display);
+}
+.auth-page--alt .auth-card__logo { background: var(--terra-500); }
+
+.auth-card .form > .field { margin-bottom: 0.9rem; }
+.auth-card .form > .btn { margin-top: 0.4rem; }
+
+.auth-card__alt { text-align: center; margin: 1.25rem 0 0; font-size: 0.9rem; color: var(--ink-400); }
+.auth-card__alt a { font-weight: 600; }
+
+.auth-card__demo {
+    margin-top: 1.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--paper-100);
+    border-radius: var(--radius-sm);
+    display: flex; flex-direction: column; gap: 0.2rem;
+    font-size: 0.8rem;
+    color: var(--ink-500);
+}
+.auth-card__demo strong { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-700); }
+
+@media (max-width: 480px) {
+    .auth-card { padding: 1.5rem 1.25rem; }
+    .auth-page { padding: 32px 16px; }
+}

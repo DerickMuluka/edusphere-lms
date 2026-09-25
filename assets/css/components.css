@@ -1,0 +1,90 @@
+/* =========================================================
+   EduSphere LMS — Generic reusable components
+   ========================================================= */
+
+.panel {
+    background: #fff;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-1);
+}
+.panel--wide { width: 100%; }
+.panel__head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--ink-200);
+}
+.panel__head h3 { margin: 0; font-size: 1rem; }
+.panel__link { font-size: 0.85rem; font-weight: 600; }
+
+/* Toolbar */
+.toolbar {
+    display: flex; align-items: center; gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+.toolbar__search { display: flex; gap: 0.5rem; flex: 1; max-width: 480px; }
+.toolbar__search input {
+    flex: 1;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid var(--ink-200);
+    border-radius: var(--radius-sm);
+    font-family: inherit; font-size: 0.9rem;
+}
+.toolbar__search input:focus { outline: none; border-color: var(--terra-500); }
+
+/* Chips */
+.chip-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.chip {
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background: var(--paper-100);
+    color: var(--ink-500);
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: background 0.15s, color 0.15s;
+}
+.chip:hover { background: var(--paper-200); }
+.chip.is-active { background: var(--ink-900); color: #fff; }
+
+/* Tabs */
+.tabs {
+    display: flex; gap: 0.25rem;
+    border-bottom: 1px solid var(--ink-200);
+    margin-bottom: 1.25rem;
+    overflow-x: auto;
+}
+.tab {
+    padding: 0.65rem 1rem;
+    background: none; border: none;
+    font-family: inherit; font-size: 0.88rem; font-weight: 600;
+    color: var(--ink-400);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+}
+.tab:hover { color: var(--ink-700); }
+.tab.is-active { color: var(--terra-500); border-bottom-color: var(--terra-500); }
+.tab-panel { display: none; }
+.tab-panel.is-active { display: block; }
+
+/* Video embed */
+.video-embed {
+    position: relative; padding-bottom: 56.25%; height: 0;
+    background: #000; border-radius: var(--radius-sm);
+    overflow: hidden; margin: 0.75rem 0;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+
+/* Generic card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
