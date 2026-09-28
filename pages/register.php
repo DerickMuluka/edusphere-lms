@@ -146,6 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create account · <?php echo e(SITE_NAME); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -244,6 +245,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <p class="auth-card__alt">Already registered? <a href="login.php">Sign in</a></p>
+        <p class="auth-card__alt" style="margin-top:0.5rem;">
+    <a href="<?php echo e(SITE_URL); ?>/">&larr; Back to home</a>
+</p>
     </main>
 
     <script src="<?php echo e(SITE_URL); ?>/assets/js/core.js"></script>
