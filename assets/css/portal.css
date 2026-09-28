@@ -1,0 +1,133 @@
+/* EduSphere — Portal page (inside iframe) */
+
+.portal-body {
+    background: #fbf8f3;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1c1a18;
+    margin: 0;
+    padding: 1.75rem 1.5rem;
+    min-height: 100vh;
+}
+
+.portal-card { max-width: 460px; margin: 0 auto; }
+
+.portal-card__head { text-align: center; margin-bottom: 1.5rem; }
+.portal-brand {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: #0b0a09;
+    color: #ffb347;
+    margin-bottom: 0.9rem;
+}
+.portal-card__head h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.02em;
+}
+.portal-card__head p { margin: 0; color: #6f6862; font-size: 0.9rem; }
+
+.form { display: block; }
+.form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.form__row .field { margin: 0; }
+
+.field { display: block; margin-bottom: 0.9rem; }
+.field__label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4a4540;
+    margin-bottom: 0.35rem;
+}
+.field__input {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #1c1a18;
+    background: #fff;
+    border: 1px solid rgba(11,10,9,0.12);
+    border-radius: 8px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field__input:focus {
+    outline: none;
+    border-color: #b8543c;
+    box-shadow: 0 0 0 3px rgba(184,84,60,0.15);
+}
+.field__password { position: relative; display: block; }
+.field__password .field__input { padding-right: 2.6rem; }
+.field__toggle {
+    position: absolute;
+    right: 0.4rem; top: 50%;
+    transform: translateY(-50%);
+    width: 30px; height: 30px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: transparent;
+    border: none;
+    color: #6f6862;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.field__toggle:hover { color: #b8543c; background: #f5efe6; }
+.field__toggle svg { pointer-events: none; }
+
+.btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0.75rem 1.15rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+    text-decoration: none;
+}
+.btn--primary { background: #0b0a09; color: #fff; }
+.btn--primary:hover { background: #b8543c; transform: translateY(-1px); }
+.btn--block { width: 100%; }
+
+.alert {
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid transparent;
+}
+.alert--error { background: #f7dede; color: #782f2f; border-color: #b14343; }
+.alert--success { background: #dcecdc; color: #2f5b2f; border-color: #3e7c4b; }
+
+.notice {
+    font-size: 0.82rem;
+    color: #6f6862;
+    background: #f5efe6;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    border-left: 3px solid #d99b34;
+    margin: 0.5rem 0 1rem;
+}
+
+.demo {
+    margin-top: 1.25rem;
+    padding: 0.75rem 0.9rem;
+    background: #f5efe6;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    color: #4a4540;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.demo strong { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: #1c1a18; }
+
+@media (max-width: 480px) {
+    .form__row { grid-template-columns: 1fr; }
+}
