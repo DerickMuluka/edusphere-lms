@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /pages/
+Disallow: /includes/
+Disallow: /database/
+Disallow: /api/
+Disallow: /assets/uploads/
+
+Sitemap: https://edusphere-lms.infinityfreeapp.com/sitemap.xml
